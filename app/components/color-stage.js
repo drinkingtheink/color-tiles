@@ -2,12 +2,15 @@ import Component from '@ember/component';
 import { colors } from '../data/colors';
 
 export default Component.extend({
-  count: 500,
+  count: 2000,
   structure: null,
   currentColor: null,
+  interval: null,
   init() {
     this._super(...arguments);
     this.createStruture();
+
+    setInterval(() => { this.createStruture(); }, 150);
   },
   getRandomColor () {
     let colorSet = colors[Math.floor(Math.random()*colors.length)];
@@ -25,6 +28,9 @@ export default Component.extend({
   actions: {
     resetStructure () {
       this.createStruture();
+    },
+    alertJoke () {
+      alert(`What did the Monster have for dessert? EYES cream!`);
     }
   }
 });
