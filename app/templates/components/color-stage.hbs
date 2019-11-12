@@ -1,1 +1,7 @@
-<h2>{{ currentColor.name }}</h2>
+<button class="reset-structure" {{action "resetStructure"}}>Reset</button>
+
+<section class="color-stage">
+  {{#each structure as |color index|}}
+    <div class="color-block" style="background-color:{{color.hex}}"></div>
+  {{/each}}
+</section>

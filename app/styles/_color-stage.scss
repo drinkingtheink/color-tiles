@@ -1,0 +1,11 @@
+.color-stage {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .color-block {
+    padding: 2em 3em;
+    margin: .2em;
+    transition: all .8s;
+  }
+}
